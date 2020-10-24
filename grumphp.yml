@@ -1,0 +1,29 @@
+grumphp:
+    git_hook_variables:
+        EXEC_GRUMPHP_COMMAND: ['docker-compose', 'run', '--rm', '--no-deps', 'minecraft-formatter']
+    stop_on_failure: false
+    parallel:
+        enabled: true
+    fixer:
+        enabled: true
+        fix_by_default: false
+    ascii:
+        failed:
+            - vendor/phpro/grumphp/resources/ascii/failed.txt
+        succeeded:
+            - vendor/phpro/grumphp/resources/ascii/succeeded.txt
+    tasks:
+        composer: ~
+        composer_require_checker: ~
+        phpcs:
+            standard:
+                - PSR2
+                - PSR12
+        phplint: ~
+        phpmd:
+            ruleset:
+                - cleancode
+        phpstan:
+            configuration: phpstan.neon
+        phpunit: ~
+        securitychecker: ~

@@ -27,5 +27,5 @@ composer install
 
 An example to check our code.  
 ```shell script
-composer check
+vendor/bin/grumphp run
 ```

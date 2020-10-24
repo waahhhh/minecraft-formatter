@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  minecraft-formatter:
+    image: waahhhh/minecraft-formatter
+    build: .docker
+    volumes:
+      - .:/opt
+    restart: "no"
+    tty: true

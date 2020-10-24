@@ -106,27 +106,27 @@ class HtmlFormatterTest extends TestCase
         ];
 
         yield 'font obfuscated' => [
-            'text' => '§gText',
+            'text' => '§kText',
             'expectedText' => '****',
         ];
 
         yield 'font bold' => [
-            'text' => '§gText',
+            'text' => '§lText',
             'expectedText' => '<b>Text</b>',
         ];
 
         yield 'font strikethrough' => [
-            'text' => '§gText',
+            'text' => '§mText',
             'expectedText' => '<s>Text</s>',
         ];
 
         yield 'font underline' => [
-            'text' => '§gText',
+            'text' => '§nText',
             'expectedText' => '<u>Text</u>',
         ];
 
         yield 'font italic' => [
-            'text' => '§gText',
+            'text' => '§oText',
             'expectedText' => '<i>Text</i>',
         ];
 

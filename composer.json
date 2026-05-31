@@ -1,13 +1,28 @@
 {
     "name": "waahhhh/minecraft-formatter",
     "description": "A library for translating the Minecraft formatting codes into another format.",
-    "type": "library",
     "license": "MIT",
-    "minimum-stability": "stable",
-    "config": {
-        "sort-packages": true,
-        "process-timeout": 1200
+    "type": "library",
+    "require": {
+        "php": "^8.4",
+        "ext-ctype": "*",
+        "ext-filter": "*",
+        "ext-mbstring": "*",
+        "illuminate/support": "^13.12"
     },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.52",
+        "maglnet/composer-require-checker": "^4.24",
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpro/grumphp": "^2.21",
+        "phpstan/phpstan": "^2.2",
+        "phpunit/phpunit": "^13.1",
+        "rector/rector": "^2.4",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "^4.0",
+        "symfony/var-dumper": "^8.1"
+    },
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Waahhhh\\MinecraftFormatter\\": "src/"
@@ -15,22 +30,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Waahhhh\\MinecraftFormatterTest\\": "tests/"
+            "Tests\\": "tests/"
         }
     },
-    "require": {
-        "php": "^7.4",
-        "ext-mbstring": "*"
-    },
-    "require-dev": {
-        "maglnet/composer-require-checker": "^2.1",
-        "php-parallel-lint/php-parallel-lint": "^1.2",
-        "phpmd/phpmd": "^2.9",
-        "phpro/grumphp": "^1.0",
-        "phpstan/phpstan": "^0.12.51",
-        "phpunit/phpunit": "^9.4",
-        "sensiolabs/security-checker": "^6.0",
-        "squizlabs/php_codesniffer": "^3.5"
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "phpro/grumphp": true
+        },
+        "process-timeout": 1200,
+        "sort-packages": true
     },
     "scripts": {
         "check": "grumphp run"
